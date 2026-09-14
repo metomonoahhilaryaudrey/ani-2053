@@ -82,7 +82,6 @@ La configuration devient donc :
 includedirs([
     ...
 ])
-
 dependson(["NKMath"])
 
 Il n'y a plus de :
