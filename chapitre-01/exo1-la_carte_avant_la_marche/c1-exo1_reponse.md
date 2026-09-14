@@ -4,6 +4,8 @@
 ### StaticLib:60
 ### WindowedApp:55
 ### TestSuite:60
+### total: 98+60+55+60=273
+
 ## 2) Donnons le nombre de chaine de compilation
 ### clang-mingw
 ### host-clang
