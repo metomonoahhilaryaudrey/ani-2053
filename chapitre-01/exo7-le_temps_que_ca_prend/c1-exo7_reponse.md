@@ -1,5 +1,5 @@
 ## Exercice 7 — Le temps que ça prend
-1. Objectif
+## 1. Objectif
 
 Le but de cet exercice est de comparer le temps nécessaire pour effectuer une première construction du workspace avec celui d'une deuxième construction réalisée immédiatement après, sans aucune modification des fichiers.
 
