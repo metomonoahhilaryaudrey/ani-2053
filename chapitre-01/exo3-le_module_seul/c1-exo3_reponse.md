@@ -2,7 +2,7 @@
 
 ``` jenga build --project NKMath ```
 
-### 2-L'ordre de construction affiché par jengsa est:
+### 2-L'ordre de construction affiché par jenga est:
 
 #### .NKPlatorm
 #### .NKCore
