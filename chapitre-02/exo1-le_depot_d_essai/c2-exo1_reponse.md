@@ -44,4 +44,4 @@ Enfin, on affiche l'historique sous forme de graphe avec :
 
 # Conclusion
 
-Cet exercice nous a permis de mettre en pratique les principales commandes de base de Git. Nous avons créé un dépôt Git vide, ajouté trois fichiers en réalisant trois commits distincts, puis consulté l’historique  Enfin, l’affichage du graphe  nous a permis de visualiser l’enchaînement des différents commits. Cet exercice permet ainsi de mieux comprendre le fonctionnement des commits et le suivi de l’évolution d’un projet avec Git.
+Cet exercice nous a permis de mettre en pratique les principales commandes de base de Git. Nous avons créé un dépôt Git vide, ajouté trois fichiers en réalisant trois commits distincts, puis consulté l’historique . Enfin, l’affichage du graphe  nous a permis de visualiser l’enchaînement des différents commits. Cet exercice permet ainsi de mieux comprendre le fonctionnement des commits et le suivi de l’évolution d’un projet avec Git.
