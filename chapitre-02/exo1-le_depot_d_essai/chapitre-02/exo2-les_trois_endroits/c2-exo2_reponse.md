@@ -1,5 +1,6 @@
 ## Exercice 2 — Étape par étape
 
+
 On part du dépôt que tu as créé dans l'exercice 1, avec tes fichiers Fichier1.txt, Fichier2.txt et Fichier3.txt.
 
 J'ai donc modifié le premier fichier et j'ai affiché ``git status`` étape par étape pour bien observer les changements.
