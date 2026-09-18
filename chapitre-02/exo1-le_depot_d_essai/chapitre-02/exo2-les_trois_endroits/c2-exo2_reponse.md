@@ -11,7 +11,6 @@ On branch main
 Your branch is ahead of 'origin/main' by 3 commits.
   (use "git push" to publish your local commits)
 
-
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
@@ -71,3 +70,4 @@ Apres la modification le fichier est dans le working Tree, apres le git add la m
 ## Conclusion
 
 # Cet exercice m'a permis de mieux comprendre les différentes étapes de l'enregistrement d'une modification avec Git.
+
