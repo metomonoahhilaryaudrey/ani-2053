@@ -1,5 +1,5 @@
 Partie 1 : Présentation
-Partie 2 : Description
+Partie 2 : Description détaillée du projet
 Partie 3 : Fonctionnement
 Partie 4 : Résultats
 Partie 5 : Conclusion
