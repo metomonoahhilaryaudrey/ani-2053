@@ -1,0 +1,7 @@
+Ligne 1 : Présentation du projet
+Ligne 2 : Objectif du projet
+Ligne 3 : Première fonctionnalité
+Ligne 4 : Deuxième fonctionnalité
+Ligne 5 : Troisième fonctionnalité
+Ligne 6 : Informations complémentaires
+Ligne 7 : Conclusion
