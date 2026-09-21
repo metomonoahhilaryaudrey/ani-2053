@@ -53,7 +53,7 @@ Ensuite, Jenga arrive à NKMath, trouve l’erreur dans NkVec.cpp et arrête la 
 
 # 3. Ce que cela montre sur l’ordre de construction
 
-Le message :
+Le message du clone 1 :
 
 Not reached: 217
 
