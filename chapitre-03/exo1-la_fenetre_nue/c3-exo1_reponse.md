@@ -2,7 +2,7 @@
 
 L’objectif de cet exercice est d’écrire un programme capable d’ouvrir une fenêtre, de la garder ouverte tant que l’utilisateur ne demande pas sa fermeture, puis de terminer proprement le programme.
 
-  On retrouve 31 lignes avec 6 lignes vides.
+  On retrouve 32 lignes avec 6 lignes vides.
 
 ## Correspondance des lignes avec le chapitre
 
@@ -37,6 +37,7 @@ L’objectif de cet exercice est d’écrire un programme capable d’ouvrir une
 29		
 30	``return 0;`` :	Le plus petit programme — terminaison normale du programme
 31	}
+32
 
 ## Execution et compilation du programme
 
