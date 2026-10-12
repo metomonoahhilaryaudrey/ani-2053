@@ -9,7 +9,7 @@ typedef long long ll;
 
 struct Glyphe { ll avance, x0, y0, x1, y1; };
 
-// Découpe une chaîne UTF-8 en caractères (1 à 4 octets chacun).
+
 static vector<string> decouper(const string& s) {
     vector<string> r;
     for (size_t i = 0; i < s.size();) {
