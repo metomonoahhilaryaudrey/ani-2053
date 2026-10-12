@@ -1,43 +1,62 @@
 #include <iostream>
 #include <string>
+#include <vector>
 #include <map>
 #include <algorithm>
 using namespace std;
 
-struct Glyphe {
-    long long avance, x0, y0, x1, y1;
-};
+typedef long long ll;
+
+struct Glyphe { ll avance, x0, y0, x1, y1; };
+
+// Découpe une chaîne UTF-8 en caractères (1 à 4 octets chacun).
+static vector<string> decouper(const string& s) {
+    vector<string> r;
+    for (size_t i = 0; i < s.size();) {
+        unsigned char c = s[i];
+        size_t len = 1;
+        if (c >= 0xF0) len = 4;
+        else if (c >= 0xE0) len = 3;
+        else if (c >= 0xC0) len = 2;
+        if (i + len > s.size()) len = s.size() - i;
+        r.push_back(s.substr(i, len));
+        i += len;
+    }
+    return r;
+}
 
 int main() {
     int G = 0, K = 0;
     cin >> G;
-    map<char, Glyphe> table;
+    map<string, Glyphe> table;
     for (int i = 0; i < G; i++) {
         string c;
         Glyphe g;
         cin >> c >> g.avance >> g.x0 >> g.y0 >> g.x1 >> g.y1;
-        table[c[0]] = g;
+        table[c] = g;
     }
 
     cin >> K;
-    map<string, long long> crenage;
+    map<pair<string, string>, ll> crenage;
     for (int i = 0; i < K; i++) {
         string ab;
-        long long k;
+        ll k;
         cin >> ab >> k;
-        crenage[ab] = k;
+        vector<string> p = decouper(ab);
+        if (p.size() == 2) crenage[{p[0], p[1]}] = k;
     }
 
-    string texte;
-    long long ox = 0, oy = 0;
-    cin >> texte >> ox >> oy;
+    string brut;
+    ll ox = 0, oy = 0;
+    cin >> brut >> ox >> oy;
+    vector<string> texte = decouper(brut);
 
-    long long x = ox, absents = 0;
+    ll x = ox, absents = 0;
     bool dessine = false;
-    long long minx = 0, miny = 0, maxx = 0, maxy = 0;
+    ll minx = 0, miny = 0, maxx = 0, maxy = 0;
 
     for (size_t i = 0; i < texte.size(); i++) {
-        char c = texte[i];
+        const string& c = texte[i];
         auto it = table.find(c);
         if (it == table.end()) {
             cout << c << " ABSENT\n";
@@ -48,23 +67,7 @@ int main() {
         cout << c << " " << x << "\n";
 
         if (g.x1 > g.x0 && g.y1 > g.y0) {
-            long long rx0 = x + g.x0, ry0 = oy + g.y0;
-            long long rx1 = x + g.x1, ry1 = oy + g.y1;
+            ll rx0 = x + g.x0, ry0 = oy + g.y0;
+            ll rx1 = x + g.x1, ry1 = oy + g.y1;
             if (!dessine) {
                 minx = rx0; miny = ry0; maxx = rx1; maxy = ry1;
-                dessine = true;
-            } else {
-                minx = min(minx, rx0); miny = min(miny, ry0);
-                maxx = max(maxx, rx1); maxy = max(maxy, ry1);
-            }
-        }
-
-        x += g.avance;
-        if (i + 1 < texte.size()) {
-            auto k = crenage.find(string() + c + texte[i + 1]);
-            if (k != crenage.end()) x += k->second;
-        }
-    }
-
-    cout << "CURSEUR " << x << "\n";
-    if
