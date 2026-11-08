@@ -59,7 +59,7 @@ int main() {
 
         int membre = -1;
 
-        // Reconnaître le destructeur.
+        
         if (ligne.find("~" + classe + "(") != string::npos) {
             membre = 0;
         }
